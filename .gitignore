@@ -1,0 +1,10 @@
+/node_modules
+/app
+/src
+/.project
+typings
+/typings
+.sass-cache
+/.sass-cache
+.idea
+/.idea
