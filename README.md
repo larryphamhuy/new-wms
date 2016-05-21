@@ -5,7 +5,15 @@ This is the angular RC1 released on 3rd May 2016
 ## Usage
 Follow the following steps and you're good to go!
 
-Important: Typescript and npm has to be installed on your machine!
+Important:
+
+Typescript and npm has to be installed on your machine!
+
+Typings must be install on your machine!
+
+```
+npm install typings -g
+```
 
 The repo uses compass to compile scss to css. So you have to install Ruby and Compass.
 
