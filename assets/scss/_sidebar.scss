@@ -1,0 +1,217 @@
+@import "variables";
+@import "more-toogle";
+@import "compass/css3/border-radius";
+
+main-menu {
+  background-color: $color-primary;
+  display: table-cell;
+  overflow: hidden;
+  vertical-align: top;
+  height: 100%;
+  .static-sidebar-wrapper {
+    position: relative;
+    transition-duration: 300ms;
+    .static-sidebar {
+      position: relative;
+      .toogle-menu-icon {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        width: 14px;
+        height: 26px;
+        text-align: center;
+        background-color: lighten($color-danger, 40%);
+        @include border-radius(2px 0px 0 2px);
+        .caret-sidebar {
+          width: 0px;
+          height: 0px;
+          border-bottom: 5px solid transparent;
+          border-top: 5px solid transparent;
+          border-right: 5px solid $color-light;
+          display: block;
+          position: absolute;
+          top: 8px;
+          left: 4px;
+        }
+
+        &:hover {
+          background-color: $color-light;
+          .caret-sidebar {
+            border-right-color: $color-danger;
+          }
+        }
+      }
+      .favorite-block {
+        ul.favorite-menu {
+          background-color: $color-gray-bg;
+          h5.title {
+            background-color: $color-danger;
+            color: $color-light;
+            margin: 0;
+            padding: 15px;
+            text-transform: uppercase;
+            font-size: 9.75pt;
+            margin-bottom: 10px;
+          }
+          li {
+            a {
+              padding: 5px 15px;
+              color: $color-gray;
+              &:hover {
+                color: $color-danger;
+                background-color: transparent;
+              }
+              &.active
+              a {
+                background-color: transparent;
+                color: $color-active;
+              }
+            }
+
+          }
+        }
+      }
+      ul.main-menu {
+        padding-top: 15px;
+        li {
+          a {
+            text-transform: uppercase;
+            color: $color-default;
+            @include font-small;
+            &:hover {
+              background-color: transparent;
+              color: $color-light;
+              text-decoration: none;
+            }
+          }
+          &.active {
+            a {
+              color: $color-light;
+              &:hover {
+                color: $color-default;
+              }
+            }
+          }
+          ul {
+            list-style: none;
+            margin-left: 10px;
+            li {
+              a {
+                text-transform: none;
+                font-size: 9.75pt;
+                line-height: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.side-bar-expand {
+    width: 240px;
+  }
+  &.side-bar-collapse {
+    width: 47px;
+    overflow: visible;
+    white-space: nowrap;
+    .toogle-menu-icon {
+      left: 47px;
+      right: auto !important;
+      border-radius: 0 2px 2px 0 !important;
+      background-color: transparent !important;
+      color: $color-default !important;
+      border: 1px solid lighten($color-gray-lightest, 20%);
+      border-left: none;
+      z-index: 9999;
+      .caret-sidebar {
+        border-right: none !important;
+        border-left: 5px solid $color-light;
+        border-color: lighten($color-gray-lightest, 20%);
+        top: 7px;
+      }
+    }
+    .favorite-block {
+      width: 47px;
+      ul {
+        h5 {
+          i {
+            color: $color-light;
+          }
+          color: transparent !important;
+        }
+        li {
+
+          a {
+            color: transparent !important;
+            i {
+              font-size: 16px;
+              color: $color-gray !important;
+            }
+            &:hover {
+              i {
+                color: $color-danger !important;
+              }
+            }
+          }
+
+        }
+      }
+    }
+    .static-sidebar-wrapper{
+      .static-sidebar{
+          ul.main-menu{
+            li{
+              position: relative;
+              a{
+                color: transparent;
+                i{
+                  color: $color-default;
+                  font-size: 16px;
+                }
+              }
+              &:hover{
+                width: 240px;
+                background-color: $color-primary;
+                z-index: 9999;
+                a{
+                  color: $color-light;
+                }
+                ul.sub-menu{
+                  display: block;
+                  li{
+                    &:hover{
+                      width: 193px;
+                    }
+                  }
+                }
+              }
+              ul.sub-menu{
+                background-color: $color-gray-bg;
+                display: none;
+                position: absolute;
+                left: 47px;
+                width: 193px;
+                z-index: 9999;
+                margin-left: 0;
+                padding-left: 0;
+                li{
+                  a{
+                    padding: 5px 10px;
+                    color: $color-primary;
+                    display: block;
+                  }
+                  &:hover{
+                    a{
+                      background-color: lighten($color-primary,10%);
+                      color: $color-light;
+                    }
+                  }
+                }
+              }
+
+            }
+          }
+      }
+    }
+  }
+}

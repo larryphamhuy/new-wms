@@ -1,0 +1,9 @@
+.wrapper{
+  display: table;width: 100%;
+  table-layout: fixed;overflow: auto;;height: 100%;
+  position: relative;
+  .layout-static{
+    display: table-row;height: 100%;
+
+  }
+}

@@ -1,0 +1,53 @@
+@import "variables";
+@import "compass/css3/border-radius";
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+.navbar{
+  @include border-radius(0,0);
+  border: none;
+}
+a{
+  transition:all 0.2s ease ;
+  &:focus{
+    background-color: transparent !important;
+  }
+  &:hover{
+    text-decoration: none;
+  }
+}
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: transparent !important; }
+i{
+  margin-right: 10px;
+}
+.breadcrumb{
+  padding: 0;
+background-color: transparent;
+li{
+
+    font-size: 9.75pt;
+    color: $color-gray-lighter;
+
+}
+}
+form{
+  margin-bottom: 0;
+}
+.form-control{
+  border-radius: 0;
+  box-shadow:none;
+  border-color: lighten($color-gray-lightest,40%);
+  &::-webkit-input-placeholder{
+    font-style: italic;
+  }
+}
+.form-group{
+  .control-label{
+    text-align: left;
+  }
+}
+
+

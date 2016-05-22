@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Glyphter';
+  //src: url('../fonts/Glyphter.eot');
+  src: url('../../src/fonts/Glyphter.eot');
+
+  //src: url('../fonts/Glyphter.eot?#iefix') format('embedded-opentype');
+  src: url('../../src/fonts/Glyphter.eot?#iefix') format('embedded-opentype'),
+
+  //url('../fonts/Glyphter.woff') format('woff'),
+  url('../../src/fonts/Glyphter.woff') format('woff'),
+
+  //url('../fonts/Glyphter.ttf') format('truetype'),
+  url('../../src/fonts/Glyphter.ttf') format('truetype'),
+
+
+  //url('../fonts/Glyphter.svg#Glyphter') format('svg');
+  url('../../src/fonts/Glyphter.svg#Glyphter') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+}
+[class*='icon-']:before{
+  display: inline-block;
+  font-family: 'Glyphter';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+.icon-favorite:before{content:'\0046';}
+.icon-calendar:before{content:'\0047';}
+.icon-notification:before{content:'\0048';}
+.icon-favorite-line:before{content:'\0049';}
+.icon-mail:before{content:'\004c';}
+.icon-arrow-top:before{content:'\004d';}
+.icon-arrow-bottom:before{content:'\004e';}
+.icon-new-notification:before{content:'\004f';}

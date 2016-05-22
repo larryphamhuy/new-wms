@@ -1,0 +1,13 @@
+@import "variables";
+
+.btn{
+padding: 4px 15px;
+  font-size: 9pt;
+}
+.btn-primary{
+  background-color: $color-danger;
+  border-color:$color-danger ;
+}
+.btn-default{
+  background-color: $color-light;
+}

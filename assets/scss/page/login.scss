@@ -1,0 +1,83 @@
+@import "../variables";
+@import "compass/css3/images";
+@import "compass/css3/border-radius";
+
+.login-body {
+  @include background(image-url('bg-login.jpg'));
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $color-light;
+  height: 100%;
+  width: 100%;
+  display: table;
+  .logo {
+    margin: 0 auto;
+    width: 400px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+  .login-page {
+    margin: 0 auto;
+    width: 400px;
+    @include background(image-url('login-bg.png'));
+    padding: 20px;
+    border: 2px solid $color-primary;
+    .logo {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .form-signin {
+      h3 {
+        padding: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 0;
+        font-weight: 500;
+      }
+      .login-block{
+        .input-style{
+          margin-bottom: 35px;
+          padding-left: 25px;
+          position: relative;
+          input{
+            @include border-radius(0);
+            color: $color-light;
+            border: none;
+            border-bottom: 1px solid $color-warning;
+            background-color: transparent;
+          }
+          i{
+            position: absolute;left: 0;
+            @include background($color-warning);
+            top:0;
+            padding: 10px;
+          }
+        }
+        a.forgot-password{
+          padding-top: 10px;
+          color:$color-light;
+          &:hover{
+            text-decoration: none;
+            color: $color-danger;
+          }
+        }
+        .button-login{
+          width: 100%;
+          .btn-login{
+            width: 100%;
+            background-color:$color-warning ;
+            color: $color-light;
+            @include border-radius(0);
+            border: none;
+            font-weight: 500;
+            border-bottom: 5px solid darken($color-warning,15%);
+            &:hover{
+              background-color: $color-gray;
+              border-bottom-color:darken($color-gray,10%) ;
+            }
+          }
+        }
+      }
+    }
+  }
+}

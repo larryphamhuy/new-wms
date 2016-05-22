@@ -1,0 +1,84 @@
+@import "variables";
+.favorite-block {
+  .show-more {
+    position: relative;
+    height: auto;
+    border-top: 0;
+  }
+
+  [type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    font-size: 8pt;
+    color: $color-gray-lightest;
+
+    /*
+     * no need to position absolutely the element
+     * because we are not interested in any transition effect
+     * position: absolute;
+     * top: 0;
+     */
+  }
+
+  /*
+   * use the rule below for testing purposes
+   * label:hover {
+   *    background: yellow;
+   *  }
+   */
+
+  label:after {
+    position: absolute;
+    left: calc(50% - 8px);
+  }
+
+  label:after {
+    font-family: Glyphter;
+    content:'\004e';
+    -webkit-animation: sudo .85s linear infinite alternate;
+    animation: sudo .85s linear infinite alternate;
+  }
+
+  @keyframes sudo {
+    from {
+      -webkit-transform: translateY(-2px);
+      transform: translateY(-2px);
+    }
+    to {
+      -webkit-transform: translateY(2px);
+      transform: translateY(2px);
+    }
+  }
+
+  input[type="checkbox"] ~ ul {
+    width: 100%;
+    display: none;
+  }
+  [type="checkbox"]:checked ~ ul {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  [type="checkbox"]:checked + label {
+    /**
+     * if we have positioned relatively the element,
+     * during the "checked" state
+     * we have to change its type of positioning
+     */
+    position: absolute;
+    top: 100%;
+  }
+
+  [type="checkbox"]:checked + label:after {
+    font-family: Glyphter;
+    content:'\004d'  }
+
+}
