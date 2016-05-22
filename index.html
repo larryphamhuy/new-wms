@@ -33,14 +33,22 @@
 <script src="node_modules/systemjs/dist/system.src.js"></script>
 
 <script src="systemjs.config.js"></script>
+<script type="text/javascript" src="node_modules/jwt-decode/build/jwt-decode.js"></script>
 <script>
     System.import('app/boot')
             .then(null, console.error.bind(console));
     System.config({
         packages: {
-            "/ng2-dnd": {"defaultExtension": "js"}
+            "/ng2-dnd": {"defaultExtension": "js"},
+            "angular2-jwt": {"defaultExtension": "js"}
         }
     });
+    /*System.config({
+        defaultJSExtensions: true,
+        map: {
+            "angular2-jwt": "node_modules/angular2-jwt/"
+        }
+    });*/
 </script>
 
 </html>

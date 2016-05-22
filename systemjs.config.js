@@ -6,7 +6,8 @@
         'rxjs':                       'node_modules/rxjs',
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
         '@angular':                   'node_modules/@angular',
-        'ng2-dnd':                    'node_modules/ng2-dnd'
+        'ng2-dnd':                    'node_modules/ng2-dnd',
+        'angular2-jwt':               'node_modules/angular2-jwt'
     };
 
     // packages tells the System loader how to load when no filename and/or no extension
@@ -14,7 +15,8 @@
         'app':                       { main: 'boot.js',  defaultExtension: 'js' },
         'rxjs':                       { defaultExtension: 'js' },
         'ng2-dnd':                    { defaultExtension: 'js' },
-        'angular2-in-memory-web-api': { defaultExtension: 'js' }
+        'angular2-in-memory-web-api': { defaultExtension: 'js' },
+        'angular2-jwt':               { defaultExtension: 'js' }
     };
 
     var packageNames = [
