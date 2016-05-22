@@ -1,4 +1,4 @@
-<div class="login jumbotron center-block">
+<!--<div class="login jumbotron center-block">
     <h1>Login</h1>
     <form role="form" (submit)="login($event, username.value, password.value)">
         <div class="form-group">
@@ -12,4 +12,48 @@
         <button type="submit" class="btn btn-default">Submit</button>
         <a href="#/signup">Click here to Signup</a>
     </form>
+</div>-->
+
+
+<div class="login-body">
+    <div class="logo">
+        <img class="img-responsive" src="src/images/logo-blue.gif">
+    </div>
+    <div class="login-page">
+    <form role="form" (submit)="login($event, username.value, password.value)">
+        <h3>login</h3>
+        <div class="login-block">
+            <div class="form-group">
+                <div class="input-style ">
+                    <!--<input [(ngModel)]="user.email" class="form-control" id="email" placeholder="Email" name="email"
+                                                        type="email" required>-->
+                    <input type="text" #username class="form-control" id="username" placeholder="Username" required>
+                    <i class="fa fa-user"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-style">
+
+                    <!--<input [(ngModel)]="user.password" id="password" placeholder="Password"
+                           name="password" type="password" class="form-control" required>-->
+                    <input type="password" #password class="form-control" id="password" placeholder="Password" required>
+                    <i class="fa fa-key"></i>
+                </div>
+            </div>
+            <!--<div class="form-group clearfix">
+                <div class="checkbox pull-left"><label><input type="checkbox"> Remember me</label></div>
+                <a href="" class="pull-right forgot-password">Forgot Password ?</a>
+            </div>
+            <div class="form-group clearfix">
+                <span>{{errorMsg}}</span>
+            </div>-->
+            <div class="button-login clearfix">
+                <!--<button (click)="login()" class="btn btn-default btn-login" type="submit" name="action">LOGIN
+                </button>-->
+                <button type="submit" class="btn btn-default btn-login">LOGIN</button>
+                <a href="#/signup">Click here to Signup</a>
+            </div>
+        </div>
+    </form>
+    </div>
 </div>

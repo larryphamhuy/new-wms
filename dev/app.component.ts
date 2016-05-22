@@ -21,9 +21,9 @@ import {SignupComponent} from "./signup/signup.component";
                 </ul>
             </nav>
         </div>-->
-        <div class="container">
-            <router-outlet></router-outlet>
-        </div>
+        
+        <router-outlet></router-outlet>
+        
     `,
 })
 /*@RouteConfig([
