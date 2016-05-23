@@ -29,8 +29,8 @@ export class LoginComponent {
             );
     }
 
-    /*signup(event) {
+    signup(event) {
         event.preventDefault();
         this.router.parent.navigateByUrl('/signup');
-    }*/
+    }
 }
